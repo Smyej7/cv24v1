@@ -39,4 +39,13 @@ public class Autre {
     public void setCommentaire(String commentaire) {
         this.commentaire = commentaire;
     }
+
+    @Override
+    public String toString() {
+        return "Autre{" +
+                "id=" + id +
+                ", titre='" + titre + '\'' +
+                ", commentaire='" + commentaire + '\'' +
+                '}';
+    }
 }

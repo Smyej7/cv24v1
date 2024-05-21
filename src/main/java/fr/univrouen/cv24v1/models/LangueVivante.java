@@ -61,4 +61,15 @@ public class LangueVivante {
     public void setNivi(int nivi) {
         this.nivi = nivi;
     }
+
+    @Override
+    public String toString() {
+        return "LangueVivante{" +
+                "id=" + id +
+                ", lang='" + lang + '\'' +
+                ", cert='" + cert + '\'' +
+                ", nivs='" + nivs + '\'' +
+                ", nivi=" + nivi +
+                '}';
+    }
 }

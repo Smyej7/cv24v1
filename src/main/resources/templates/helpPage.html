@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #343a40;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>API Documentation</h1>
+<ul>
+    <li th:each="endpoint : ${endpoints}">
+        <strong>URL:</strong> <span th:text="${endpoint.url}">/</span>
+        <strong>Méthode:</strong> <span th:text="${endpoint.method}">GET</span>
+        <strong>Résumé:</strong> <span th:text="${endpoint.summary}">Affiche la page d'accueil du projet avec les informations de base.</span>
+        <div th:if="${endpoint.requestFormat != null}">
+            <strong>Format attendu:</strong> <span th:text="${endpoint.requestFormat}">application/xml</span>
+        </div>
+        <div th:if="${endpoint.responseFormat != null}">
+            <strong>Format de retour:</strong> <span th:text="${endpoint.responseFormat}">application/json</span>
+        </div>
+        <div th:if="${endpoint.parameters != null}">
+            <strong>Paramètres:</strong> <span th:text="${endpoint.parameters}">id (numérique, identifiant du CV)</span>
+        </div>
+    </li>
+</ul>
+</body>
+</html>

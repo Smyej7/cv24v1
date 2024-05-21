@@ -61,4 +61,15 @@ public class Competence {
     public void setNiveau(int niveau) {
         this.niveau = niveau;
     }
+
+    @Override
+    public String toString() {
+        return "Competence{" +
+                "id=" + id +
+                ", date='" + date + '\'' +
+                ", institut='" + institut + '\'' +
+                ", titre='" + titre + '\'' +
+                ", niveau=" + niveau +
+                '}';
+    }
 }

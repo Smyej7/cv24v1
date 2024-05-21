@@ -51,4 +51,14 @@ public class Experience {
     public void setTitre(String titre) {
         this.titre = titre;
     }
+
+    @Override
+    public String toString() {
+        return "Experience{" +
+                "id=" + id +
+                ", datedeb='" + datedeb + '\'' +
+                ", datefin='" + datefin + '\'' +
+                ", titre='" + titre + '\'' +
+                '}';
+    }
 }

@@ -77,4 +77,16 @@ public class Identite {
     public void setMel(String mel) {
         this.mel = mel;
     }
+
+    @Override
+    public String toString() {
+        return "Identite{" +
+                "id=" + id +
+                ", genre='" + genre + '\'' +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", tel='" + tel + '\'' +
+                ", mel='" + mel + '\'' +
+                '}';
+    }
 }

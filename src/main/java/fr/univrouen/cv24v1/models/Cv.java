@@ -114,4 +114,19 @@ public class Cv {
     public void setAutre(List<Autre> autre) {
         this.autre = autre;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Cv{id=").append(id)
+                .append(", identite=").append(identite)
+                .append(", status='").append(status).append('\'')
+                .append(", objectif='").append(objectif).append('\'')
+                .append(", prof=").append(prof)
+                .append(", competences=").append(competences)
+                .append(", lv=").append(lv)
+                .append(", autre=").append(autre)
+                .append('}');
+        return sb.toString();
+    }
 }

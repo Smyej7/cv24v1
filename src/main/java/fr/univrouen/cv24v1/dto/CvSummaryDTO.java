@@ -23,12 +23,14 @@ public class CvSummaryDTO {
     public CvSummaryDTO() {
     }
 
-    public CvSummaryDTO(Long id, String identite, String objectif, String diplome) {
+    public CvSummaryDTO(Long id, String identite, String objectif) {
         this.id = id;
         this.identite = identite;
         this.objectif = objectif;
         this.diplome = diplome;
     }
+
+    // Getters and Setters
 
     public Long getId() {
         return id;
