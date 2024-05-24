@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cv24 xmlns="http://univ.fr/cv24">
+    <identite>
+        <genre>M</genre>
+        <nom>SMYAJ</nom>
+        <prenom>Abdelhakim</prenom>
+        <tel>0780366426</tel>
+        <mel>smyaj.abdelhakim@gmail.com</mel>
+    </identite>
+    <objectif status="Stage">Poste de Chef de Projet</objectif>
+    <prof>
+        <detail>
+            <datedeb>2001-01-01</datedeb>
+            <datefin>2001-03-01</datefin>
+            <titre>chef projet</titre>
+        </detail>
+        <detail>
+            <datedeb>2022-01-01</datedeb>
+            <datefin>2023-03-01</datefin>
+            <titre>scrum master</titre>
+        </detail>
+    </prof>
+    <competences>
+        <diplome niveau="8">
+            <date>2022-01-01</date>
+            <institut>Univ de rouen</institut>
+            <titre>Master Informatique</titre>
+        </diplome>
+        <diplome niveau="2">
+            <date>2023-01-01</date>
+            <institut>Univ de rouen</institut>
+            <titre>Licence Informatique</titre>
+        </diplome>
+        <certif>
+            <datedeb>2001-01-01</datedeb>
+            <datefin>2011-01-01</datefin>
+            <titre>CCNA cisco</titre>
+        </certif>
+        <certif>
+            <datedeb>2002-01-01</datedeb>
+            <datefin>2022-01-01</datefin>
+            <titre>Agile Scrum Master</titre>
+        </certif>
+    </competences>
+    <divers>
+        <lv>
+            <lang>FR</lang>
+            <cert>MAT</cert>
+            <nivs>A1</nivs>
+            <nivi>1</nivi>
+        </lv>
+        <lv>
+            <lang>EN</lang>
+            <cert>TOEIC</cert>
+            <nivs>C1</nivs>
+            <nivi>2</nivi>
+        </lv>
+        <autre>
+            <titre>permis de conduire</titre>
+            <commentaire>test comm</commentaire>
+        </autre>
+    </divers>
+</cv24>

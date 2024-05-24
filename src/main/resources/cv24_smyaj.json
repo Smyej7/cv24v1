@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "3cf3fd34-1e5f-49d5-9130-ea02d577079f",
+		"name": "cv24_smyaj",
+		"description": "Collection de tests pour le service REST de gestion des CVs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21473137"
+	},
+	"item": [
+		{
+			"name": "Page d'accueil",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page d'aide",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/help",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"help"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liste des CVs (XML)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/cv24/resume/xml",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"cv24",
+						"resume",
+						"xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liste des CVs (HTML)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/cv24/resume",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"cv24",
+						"resume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Détail d'un CV (XML)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/cv24/xml?id={{cv_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"cv24",
+						"xml"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{cv_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Détail d'un CV (HTML)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/cv24/html?id={{cv_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"cv24",
+						"html"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{cv_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertion d'un CV",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<cv24 xmlns=\"http://univ.fr/cv24\">\n  <identite>\n    <genre>M</genre>\n    <nom>SMYAJ</nom>\n    <prenom>Abdelhakim</prenom>\n    <tel>0780366477</tel>\n    <mel>smyaj.abdelhakim@gmail.com</mel>\n  </identite>\n  <objectif status=\"Stage\">Poste de Chef de Projet</objectif>\n  <prof>\n    <detail>\n      <datedeb>2001-01-01</datedeb>\n      <datefin>2001-03-01</datefin>\n      <titre>chef projet</titre>\n    </detail>\n    <detail>\n      <datedeb>2022-01-01</datedeb>\n      <datefin>2023-03-01</datefin>\n      <titre>scrum master</titre>\n    </detail>\n  </prof>\n  <competences>\n    <diplome niveau=\"8\">\n      <date>2022-01-01</date>\n      <institut>Univ de rouen</institut>\n      <titre>Master Informatique</titre>\n    </diplome>\n    <diplome niveau=\"2\">\n      <date>2023-01-01</date>\n      <institut>Univ de rouen</institut>\n      <titre>Licence Informatique</titre>\n    </diplome>\n    <certif>\n      <datedeb>2001-01-01</datedeb>\n      <datefin>2011-01-01</datefin>\n      <titre>CCNA cisco</titre>\n    </certif>\n    <certif>\n      <datedeb>2002-01-01</datedeb>\n      <datefin>2022-01-01</datefin>\n      <titre>Agile Scrum Master</titre>\n    </certif>\n  </competences>\n  <divers>\n    <lv>\n      <lang>FR</lang>\n      <cert>MAT</cert>\n      <nivs>A1</nivs>\n      <nivi>1</nivi>\n    </lv>\n    <lv>\n      <lang>EN</lang>\n      <cert>TOEIC</cert>\n      <nivs>C1</nivs>\n      <nivi>2</nivi>\n    </lv>\n    <autre>\n      <titre>permis de conduire</titre>\n      <commentaire>test comm</commentaire>\n    </autre>\n  </divers>\n</cv24>"
+				},
+				"url": {
+					"raw": "{{base_url}}/cv24/insert",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"cv24",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Suppression d'un CV",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/cv24/delete?id={{cv_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"cv24",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{cv_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080"
+		},
+		{
+			"key": "cv_id",
+			"value": "1"
+		}
+	]
+}
