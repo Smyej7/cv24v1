@@ -7,6 +7,9 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
+
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 import java.io.StringReader;
 
 public class XmlValidator {

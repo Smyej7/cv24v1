@@ -1,6 +1,10 @@
 package fr.univrouen.cv24v1.models;
 
-import javax.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import javax.xml.bind.annotation.*;
 
 @Entity
